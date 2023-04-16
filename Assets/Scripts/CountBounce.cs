@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CountBounce : MonoBehaviour
+public class countbounce : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+    public int x = 0;
+    
+    void OnTriggerEnter()
     {
-        
-        print("Object has entered the collider" + gameObject.name);
+        if (x < 1000)
+        {
+            print(x++);
+         }
+       
     }
     // Start is called before the first frame update
     void Start()
@@ -18,7 +23,6 @@ public class CountBounce : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         
     }
 }
